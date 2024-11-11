@@ -13,3 +13,19 @@
   margin: 0 auto;
   padding: 9.6rem var(--side-padding);
 }
+
+.input-container {
+  width: 32rem;
+  background-color: var(--clr-neutral-white);
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  color: var(--clr-text-200);
+  padding: 1.6rem 1.4rem;
+  border: 2px solid var(--clr-text-100);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--clr-text-100);
+    font: inherit;
+  }
+}

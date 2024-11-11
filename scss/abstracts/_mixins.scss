@@ -3,10 +3,11 @@
   place-items: center;
 }
 
-@mixin flex-center {
+@mixin flex-center($direction) {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: $direction;
 }
 
 @mixin media-query($breakpoint) {
