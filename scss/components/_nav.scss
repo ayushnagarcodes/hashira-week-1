@@ -1,0 +1,129 @@
+@use "../abstracts" as abs;
+
+.nav {
+  $self: &;
+  position: relative;
+  padding: 0.4rem 2rem 3.8rem;
+  @include abs.grid-center;
+  gap: 2.4rem;
+
+  @include abs.media-query(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 2.4rem;
+  }
+
+  &__logo {
+    @include abs.grid-center;
+    font-family: var(--ff-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    @include abs.media-query(tablet) {
+      font-size: 1.2rem;
+    }
+
+    &-container {
+      position: relative;
+      left: 0.5rem;
+      width: 12rem;
+      height: 12rem;
+
+      @include abs.media-query(tablet) {
+        width: 4.8rem;
+        height: 4.8rem;
+        left: 0;
+      }
+    }
+
+    &-text {
+      text-transform: uppercase;
+
+      span:first-child {
+        color: var(--clr-primary);
+      }
+      span:last-child {
+        color: var(--clr-text-500);
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 4.8rem;
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+    color: var(--clr-text-500);
+
+    @include abs.media-query(tablet) {
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      min-height: 95vh;
+      min-height: 100dvh;
+      width: 100%;
+      display: none;
+      background-color: var(--clr-neutral-white);
+      padding: 2rem;
+    }
+  }
+
+  &__hamburger-menu {
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+
+    @include abs.media-query(tablet) {
+      @include abs.grid-center;
+    }
+
+    span,
+    &::before,
+    &::after {
+      display: inline-block;
+      position: absolute;
+      width: 80%;
+      height: 1.5px;
+      background-color: var(--clr-text-500);
+      border-radius: 2.8rem;
+      transition: var(--timing-function) 0.3s;
+    }
+
+    span {
+      transform: translateY(1rem);
+    }
+
+    &::before {
+      content: "";
+      transform: translateY(-1rem);
+    }
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &--hamburger-active {
+    #{ $self }__items {
+      @include abs.flex-center;
+    }
+
+    #{ $self }__hamburger-menu {
+      span {
+        transform: translateY(0) rotate(-45deg);
+      }
+
+      &::before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}

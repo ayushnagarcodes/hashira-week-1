@@ -1,3 +1,5 @@
+@use "../abstracts" as abs;
+
 *,
 *::before,
 *::after {
@@ -9,13 +11,23 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+
+  @include abs.media-query(tablet) {
+    font-size: 55%;
+  }
+
+  @include abs.media-query(mobile) {
+    font-size: 50%;
+  }
 }
 
 body {
   background-color: var(--clr-neutral-white);
+  background-color: var(--clr-text-100);
   overflow-x: hidden;
   font-family: var(--ff-secondary);
   font-size: 1.6rem;
+  font-weight: 400;
   color: var(--clr-text-200);
 }
 

@@ -1,4 +1,15 @@
-@mixin respond($breakpoint) {
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin media-query($breakpoint) {
   @if $breakpoint == desktop {
     @media only screen and (max-width: 90em) {
       @content;
