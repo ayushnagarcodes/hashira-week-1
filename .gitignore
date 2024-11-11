@@ -1,0 +1,23 @@
+node_modules
+
+# SASS/SCSS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

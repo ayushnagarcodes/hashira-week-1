@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-neutral-white);
+  overflow-x: hidden;
+  font-family: var(--ff-secondary);
+  font-size: 1.6rem;
+  color: var(--clr-text-200);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-primary);
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  cursor: pointer;
+  transition: 0.3s var(--timing-function);
+}
+
+input {
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  font: inherit;
+  color: var(--clr-text-100);
+
+  &:focus {
+    outline-color: transparent;
+  }
+}
