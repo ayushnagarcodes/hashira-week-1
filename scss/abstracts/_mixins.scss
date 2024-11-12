@@ -13,18 +13,22 @@
 @mixin media-query($breakpoint) {
   @if $breakpoint == desktop {
     @media only screen and (max-width: 90em) {
-      @content;
-    }
-  } @else if $breakpoint == desktop-small {
-    @media only screen and (max-width: 75em) {
+      // 1440px
       @content;
     }
   } @else if $breakpoint == tablet {
+    @media only screen and (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+  } @else if $breakpoint == tablet-small {
     @media only screen and (max-width: 48em) {
+      // 768px
       @content;
     }
   } @else if $breakpoint == mobile {
     @media only screen and (max-width: 30em) {
+      // 480px
       @content;
     }
   } @else {

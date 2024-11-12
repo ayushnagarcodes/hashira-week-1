@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 
-  @include abs.media-query(tablet) {
+  @include abs.media-query(tablet-small) {
     font-size: 55%;
   }
 
@@ -29,7 +29,7 @@ body {
   font-weight: 400;
   color: var(--clr-text-200);
 
-  @include abs.media-query(tablet) {
+  @include abs.media-query(tablet-small) {
     margin-top: 10rem;
   }
 }

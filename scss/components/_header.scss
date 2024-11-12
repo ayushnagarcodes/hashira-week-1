@@ -3,7 +3,7 @@
 .header {
   background-color: var(--clr-neutral-white);
 
-  @include abs.media-query(tablet) {
+  @include abs.media-query(tablet-small) {
     position: fixed;
     top: 0;
     left: 0;
