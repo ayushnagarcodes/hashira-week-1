@@ -11,7 +11,12 @@
 }
 
 @mixin media-query($breakpoint) {
-  @if $breakpoint == desktop {
+  @if $breakpoint == desktop-large {
+    @media only screen and (min-width: 110em) {
+      // 1760px
+      @content;
+    }
+  } @else if $breakpoint == desktop {
     @media only screen and (min-width: 90em) {
       // 1440px
       @content;
