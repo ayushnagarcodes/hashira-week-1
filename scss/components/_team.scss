@@ -44,4 +44,30 @@
       color: var(--clr-text-400);
     }
   }
+
+  &__slider-btn {
+    display: inline-block;
+    margin: 3rem var(--side-padding) 0 auto;
+    color: var(--clr-text-500);
+    font-weight: 600;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      position: relative;
+      top: 1px;
+    }
+
+    @include abs.media-query(desktop) {
+      margin: 3rem calc(var(--side-padding) + 4rem) 0 auto;
+    }
+
+    @include abs.media-query(mobile) {
+      display: none;
+    }
+  }
 }
