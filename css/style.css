@@ -526,4 +526,50 @@ input:focus {
   color: var(--clr-text-300);
 }
 
+.mission {
+  min-height: 65rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: var(--ff-primary);
+}
+@media only screen and (max-width: 56.25em) {
+  .mission {
+    grid-template-columns: 1fr;
+    min-height: 60rem;
+  }
+}
+.mission__banner {
+  transform: scaleX(-1);
+}
+@media only screen and (max-width: 56.25em) {
+  .mission__banner {
+    display: none;
+  }
+}
+.mission__content {
+  color: var(--clr-neutral-white);
+  text-align: center;
+  padding: 12rem 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: var(--clr-primary);
+}
+.mission__heading {
+  font-weight: 700;
+  font-size: 4rem;
+}
+.mission__description {
+  max-width: 51rem;
+  font-size: 1.8rem;
+}
+.mission__cta {
+  margin-top: 3.2rem;
+  padding: 1.6rem 4.8rem;
+  border: 2px solid var(--clr-neutral-white);
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=style.css.map */
