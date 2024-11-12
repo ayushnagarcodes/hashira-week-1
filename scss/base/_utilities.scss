@@ -9,9 +9,9 @@
 }
 
 .section-container {
-  max-width: 90em;
+  max-width: 94em;
   margin: 0 auto;
-  padding: 9.6rem var(--side-padding);
+  padding: 7.2rem var(--side-padding) 14rem;
 }
 
 .heading-underline {
@@ -23,10 +23,10 @@
 
   &::before {
     position: absolute;
-    bottom: -1.4rem;
+    bottom: -1.6rem;
     left: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     width: 16rem;
     left: 50%;
     transform: translateX(-50%);

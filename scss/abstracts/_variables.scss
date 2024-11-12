@@ -13,9 +13,13 @@
   --clr-neutral-white: #ffffff;
 
   --timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
-  --side-padding: "4.8rem";
+  --side-padding: 4.8rem;
+
+  @include abs.media-query(desktop) {
+    --side-padding: 14rem;
+  }
 
   @include abs.media-query(mobile) {
-    --side-padding: "2.4rem";
+    --side-padding: 2.4rem;
   }
 }
