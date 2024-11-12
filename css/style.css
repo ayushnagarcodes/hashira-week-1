@@ -125,14 +125,16 @@ input:focus {
 
 .heading-underline {
   position: relative;
+  padding: 0 2.4rem;
   font-size: 4.8rem;
   color: var(--clr-text-500);
   text-align: center;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 .heading-underline::before {
   position: absolute;
-  bottom: -1.6rem;
+  bottom: -16px;
   left: 0;
   content: "";
   height: 3px;
@@ -207,6 +209,11 @@ input:focus {
 @media only screen and (min-width: 90em) {
   .slider-fix {
     margin-right: var(--side-padding);
+  }
+}
+@media only screen and (max-width: 30em) {
+  .slider-fix {
+    margin-right: 0;
   }
 }
 
@@ -694,6 +701,95 @@ input:focus {
 @media only screen and (max-width: 30em) {
   .team__slider-btn {
     display: none;
+  }
+}
+
+.review {
+  padding-bottom: 11rem;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 30em) {
+  .review {
+    margin-top: -8rem;
+  }
+}
+.review .slider-wrapper {
+  gap: 3rem;
+}
+@media only screen and (max-width: 30em) {
+  .review .slider-wrapper {
+    flex-direction: row;
+  }
+}
+.review__card {
+  max-width: 37rem;
+  min-height: 43rem;
+  padding: 6.4rem 4rem 4.8rem;
+  background-color: var(--clr-neutral-white);
+  box-shadow: 0px 10px 15px 0px rgba(101, 90, 90, 0.2509803922);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+.review__rating {
+  display: flex;
+}
+.review__rating svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.review__description {
+  font-size: 1.8rem;
+}
+.review__author {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0 1.4rem;
+}
+.review__author-img {
+  grid-row: span 2;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+}
+.review__author-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.review__author-title {
+  font-size: 1.4rem;
+}
+.review__slider-btns {
+  width: fit-content;
+  margin: 3rem var(--side-padding) 0 auto;
+  display: flex;
+  gap: 2rem;
+}
+.review__slider-btns button {
+  color: var(--clr-text-500);
+  font-weight: 600;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.review__slider-btns button svg {
+  width: 3.6rem;
+  height: 3.6rem;
+  position: relative;
+  top: 1px;
+}
+@media only screen and (min-width: 90em) {
+  .review__slider-btns {
+    margin: 3rem calc(var(--side-padding) + 4rem) 0 auto;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .review__slider-btns {
+    margin-top: 0rem;
   }
 }
 

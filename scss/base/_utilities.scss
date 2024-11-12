@@ -18,14 +18,16 @@
 
 .heading-underline {
   position: relative;
+  padding: 0 2.4rem;
   font-size: 4.8rem;
   color: var(--clr-text-500);
   text-align: center;
   text-transform: uppercase;
+  text-wrap: balance;
 
   &::before {
     position: absolute;
-    bottom: -1.6rem;
+    bottom: -16px;
     left: 0;
     content: "";
     height: 3px;
@@ -99,5 +101,9 @@
 
   @include abs.media-query(desktop) {
     margin-right: var(--side-padding);
+  }
+
+  @include abs.media-query(mobile) {
+    margin-right: 0;
   }
 }
