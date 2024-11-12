@@ -359,6 +359,16 @@ input:focus {
   display: grid;
   place-items: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .hero {
+    background-size: 160%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .hero {
+    background-size: 350%;
+  }
+}
 .hero__container {
   max-width: 56rem;
   margin-bottom: 4.8rem;

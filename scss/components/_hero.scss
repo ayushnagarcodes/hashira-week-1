@@ -11,6 +11,14 @@
   color: var(--clr-neutral-white);
   @include abs.grid-center;
 
+  @include abs.media-query(tablet) {
+    background-size: 160%;
+  }
+
+  @include abs.media-query(mobile) {
+    background-size: 350%;
+  }
+
   &__container {
     max-width: 56rem;
     margin-bottom: 4.8rem;
