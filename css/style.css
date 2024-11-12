@@ -542,6 +542,7 @@ input:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-family: var(--ff-primary);
+  background-color: var(--clr-primary);
 }
 @media only screen and (max-width: 56.25em) {
   .mission {
@@ -566,7 +567,6 @@ input:focus {
   justify-content: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: var(--clr-primary);
 }
 .mission__heading {
   font-weight: 700;
