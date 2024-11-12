@@ -11,6 +11,7 @@
 
   @include abs.media-query(tablet) {
     padding: 3.2rem 2.4rem 13rem;
+    margin-top: 0.8rem;
   }
 
   @include abs.media-query(tablet-small) {
