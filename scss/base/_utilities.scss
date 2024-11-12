@@ -1,3 +1,5 @@
+@use "../abstracts" as abs;
+
 .img-container {
   overflow: hidden;
 
@@ -11,7 +13,7 @@
 .section-container {
   max-width: 94em;
   margin: 0 auto;
-  padding: 7.2rem var(--side-padding) 14rem;
+  padding: 7.2rem var(--side-padding) 15rem;
 }
 
 .heading-underline {
@@ -31,6 +33,10 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--clr-primary);
+
+    @include abs.media-query(mobile) {
+      height: 2px;
+    }
   }
 }
 
